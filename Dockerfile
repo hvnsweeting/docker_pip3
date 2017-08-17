@@ -1,5 +1,5 @@
-FROM python:3
+FROM python:3-slim
 MAINTAINER Viet Hung Nguyen <hvn@familug.org>
 
-RUN apt -qy update && apt-get install -y make && rm -rf /var/lib/apt/lists/*
-RUN pip3 install --upgrade pip
+RUN apt-get update && apt-get install -y make && rm -rf /var/lib/apt/lists/*
+RUN pip install -U pip flake8 'PyYAML>=3.11' && rm -rf /root/.cache/pip
