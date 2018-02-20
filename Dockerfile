@@ -1,4 +1,4 @@
-FROM python:3-slim
+FROM python:3
 MAINTAINER Viet Hung Nguyen <hvn@familug.org>
 
 RUN apt-get update && apt-get install -y make && rm -rf /var/lib/apt/lists/*
